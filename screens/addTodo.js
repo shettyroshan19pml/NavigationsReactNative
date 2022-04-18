@@ -24,6 +24,3 @@ export default function AddTodo({submitTodo}){
 
 }
 
-const styles = StyleSheet.create({
-    
-})
