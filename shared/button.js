@@ -1,6 +1,8 @@
 import React from 'react';
 import {Text, TouchableOpacity, View, StyleSheet} from 'react-native';
 import {IconX, ICON_TYPE} from '../src/store/icons/IconX';
+import {SvgXml} from 'react-native-svg';
+import {icons} from '../assets/icons';
 
 function Flatbutton({
   text,
@@ -15,6 +17,9 @@ function Flatbutton({
   iconsize,
   ...others
 }) {
+  // const iconInfo =;
+
+  // const dynamicIcon =
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -27,12 +32,11 @@ function Flatbutton({
           flexDirection: 'row',
           justifyContent: 'flex-start',
         }}>
-        {iconOrigin ? (
-          <IconX
-            color={iconColor}
-            origin={iconOrigin}
-            name={iconName}
-            size={20}
+        {iconName ? (
+          <SvgXml
+            // color="white"
+            stroke={iconColor}
+            xml={icons[iconName]}
             style={{marginRight: 5}}
           />
         ) : null}

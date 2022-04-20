@@ -28,6 +28,7 @@ import ToDoScreen from './screens/ToScreen';
 import WheatherApp from './screens/WheatherApp';
 import Transactions from './screens/Transactions';
 import Signup from './screens/Signup';
+import PhoneLogin from './screens/PhoneLogin';
 import {LogBox} from 'react-native';
 
 LogBox.ignoreLogs([
@@ -107,6 +108,21 @@ function App() {
           name="HomeDrawer"
           options={{headerShown: false}}
           component={TabRoutes}
+        />
+        <Stack.Screen
+          name="Home"
+          options={{headerShown: false}}
+          component={Home}
+        />
+        <Stack.Screen
+          name="ToDoScreen"
+          options={{headerShown: false}}
+          component={ToDoScreen}
+        />
+        <Stack.Screen
+          name="PhoneLogin"
+          options={{headerShown: false}}
+          component={PhoneLogin}
         />
         {/* <Stack.Screen name="ToDoScreen" component={DrawerRoutes} /> */}
       </Stack.Navigator>
