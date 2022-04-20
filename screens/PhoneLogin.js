@@ -12,7 +12,7 @@ import {
 import 'react-native-gesture-handler';
 import Flatbutton from '../shared/button';
 
-export default function Login(props) {
+export default function PhoneLogin(props) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -20,48 +20,7 @@ export default function Login(props) {
         <Image source={require('../assets/LoginMan.png')} />
       </View>
       <View style={styles.footer}>
-        <Flatbutton
-          text="Continue with phone number"
-          onPress={() => props.navigation.navigate('PhoneLogin')}
-          iconName="phone"
-          iconColor="white"
-          styleButton={{alignItems: 'center', marginTop: 20, borderRadius: 8}}
-          StyleText={{
-            color: 'white',
-            fontSize: 16,
-            alignItems: 'center',
-            // FontFace: 'Manrope',
-            height: 24,
-          }}
-        />
-        <Flatbutton
-          text="Continue with email"
-          onPress={() => console.log('clicked with email button')}
-          iconName="email"
-          iconColor="#1F9ED3"
-          styleIcon={{borderWidth: 2, borderColor: 'blue'}}
-          StyleText={{
-            color: '#1F9ED3',
-            fontSize: 16,
-            alignItems: 'center',
-            // FontFace: 'Manrope',
-            height: 24,
-          }}
-          styleButton={{
-            alignItems: 'center',
-            marginTop: 20,
-            borderRadius: 8,
-            backgroundColor: 'white',
-            borderWidth: 1,
-            borderStyle: 'solid',
-            borderColor: '#1F9ED3',
-          }}></Flatbutton>
-
-        <Text
-          style={{color: 'blue'}}
-          onPress={() => props.navigation.navigate('Home')}>
-          I’d like to explore for now
-        </Text>
+        <Text>This is loginPhone</Text>
       </View>
     </View>
   );
@@ -77,12 +36,12 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#1F9ED3',
-    flex: 3,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
   footer: {
-    flex: 1,
+    flex: 2,
     backgroundColor: 'white',
     // backgroundColor: 'red',
     borderTopLeftRadius: 30,

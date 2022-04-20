@@ -1,38 +1,25 @@
 import React from 'react';
 import {View, Text, Button, Dimensions, Image, StyleSheet} from 'react-native';
-import 'react-native-gesture-handler';
+// import {ToggleButton} from 'react-native-paper';
 
-function Splash(props) {
-  console.log('splash');
-  console.log(props);
-  setTimeout(() => {
-    props.navigation.navigate('Login');
-  }, 3000);
+function Transactions() {
+  const [value, setValue] = React.useState('left');
   return (
     <View style={styles.container}>
-      <Text>Splash</Text>
       <View style={styles.header}>
-        <Image
-          style={{height: 200, width: 200}}
-          source={require('../assets/briixlogoGIF.gif')}
-        />
+        {/* <ToggleButton.Group
+          onValueChange={value => setValue(value)}
+          value={value}>
+          <ToggleButton icon="format-align-left" value="left" />
+          <ToggleButton icon="format-align-right" value="right" />
+        </ToggleButton.Group> */}
       </View>
-
-      {/* <View style={styles.footer}>
-        <Button
-          title="go to login"
-          onPress={() => props.navigation.replace('Login')}
-        />
-        <Button
-          title="go to Signup"
-          onPress={() => props.navigation.replace('Signup')}
-        />
-      </View> */}
+      <View style={styles.footer}></View>
     </View>
   );
 }
 
-export default Splash;
+export default Transactions;
 
 const {height} = Dimensions.get('screen');
 const height_logo = height * 0.28;
@@ -40,20 +27,22 @@ const height_logo = height * 0.28;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#1F9ED3',
   },
   header: {
-    flex: 2,
+    backgroundColor: '#1F9ED3',
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   footer: {
-    flex: 1,
-    backgroundColor: '#F5F5F5',
+    flex: 3,
+    backgroundColor: 'white',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingVertical: 50,
     paddingHorizontal: 30,
+    alignItems: 'center',
   },
   logo: {
     width: height_logo,
@@ -69,8 +58,13 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   button: {
-    alignItems: 'flex-end',
-    marginTop: 30,
+    height: 48,
+    width: 328,
+    left: 0,
+    top: 0,
+    borderRadius: 50,
+    padding: (12, 12),
+    backgroundColor: '#1F9ED3',
   },
   signIn: {
     width: 150,
